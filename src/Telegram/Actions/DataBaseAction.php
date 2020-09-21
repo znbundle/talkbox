@@ -1,6 +1,7 @@
 <?php
 
-namespace ZnBundle\TalkBox\Domain\Actions;
+namespace ZnBundle\TalkBox\Telegram\Actions;
+//namespace ZnBundle\TalkBox\Telegram\Actions;
 
 use ZnBundle\TalkBox\Domain\Helpers\WordHelper;
 use Illuminate\Container\Container;

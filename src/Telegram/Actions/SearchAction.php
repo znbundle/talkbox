@@ -1,6 +1,6 @@
 <?php
 
-namespace ZnBundle\TalkBox\Domain\Actions;
+namespace ZnBundle\TalkBox\Telegram\Actions;
 
 use ZnLib\Telegram\Domain\Entities\RequestEntity;
 use ZnLib\Telegram\Domain\Base\BaseAction;

@@ -12,6 +12,4 @@ class Domain implements DomainInterface
         return 'dialog';
     }
 
-
 }
-
