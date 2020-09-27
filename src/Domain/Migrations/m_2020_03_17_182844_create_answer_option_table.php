@@ -3,8 +3,8 @@
 namespace Migrations;
 
 use Illuminate\Database\Schema\Blueprint;
-use ZnCore\Db\Migration\Base\BaseCreateTableMigration;
-use ZnCore\Db\Migration\Enums\ForeignActionEnum;
+use ZnLib\Migration\Domain\Base\BaseCreateTableMigration;
+use ZnLib\Migration\Domain\Enums\ForeignActionEnum;
 
 class m_2020_03_17_182844_create_answer_option_table extends BaseCreateTableMigration
 {

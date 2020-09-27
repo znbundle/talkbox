@@ -2,7 +2,7 @@
 
 namespace ZnBundle\TalkBox\Domain\Repositories\Eloquent;
 
-use ZnCore\Db\Db\Base\BaseEloquentCrudRepository;
+use ZnLib\Db\Base\BaseEloquentCrudRepository;
 use ZnBundle\TalkBox\Domain\Entities\AnswerEntity;
 use ZnBundle\TalkBox\Domain\Interfaces\Repositories\AnswerRepositoryInterface;
 
