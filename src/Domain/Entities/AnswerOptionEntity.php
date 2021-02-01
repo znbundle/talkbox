@@ -3,10 +3,11 @@
 namespace ZnBundle\TalkBox\Domain\Entities;
 
 use Symfony\Component\Validator\Constraints as Assert;
-use ZnCore\Domain\Interfaces\Entity\ValidateEntityInterface;
+use Symfony\Component\Validator\Mapping\ClassMetadata;
+use ZnCore\Domain\Interfaces\Entity\ValidateEntityByMetadataInterface;
 use ZnCore\Domain\Interfaces\Entity\EntityIdInterface;
 
-class AnswerOptionEntity implements ValidateEntityInterface, EntityIdInterface
+class AnswerOptionEntity implements ValidateEntityByMetadataInterface, EntityIdInterface
 {
 
     private $id = null;
@@ -17,22 +18,9 @@ class AnswerOptionEntity implements ValidateEntityInterface, EntityIdInterface
 
     private $text = null;
 
-    public function validationRules()
+    public static function loadValidatorMetadata(ClassMetadata $metadata)
     {
-        return [
-            /*'id' => [
-                new Assert\NotBlank,
-            ],
-            'answerId' => [
-                new Assert\NotBlank,
-            ],
-            'sort' => [
-                new Assert\NotBlank,
-            ],
-            'text' => [
-                new Assert\NotBlank,
-            ],*/
-        ];
+
     }
 
     public function setId($value) : void

@@ -2,12 +2,13 @@
 
 namespace ZnBundle\TalkBox\Domain\Entities;
 
+use Symfony\Component\Validator\Mapping\ClassMetadata;
 use ZnLib\Telegram\Domain\Libs\SoundexRuEn;
 use Symfony\Component\Validator\Constraints as Assert;
-use ZnCore\Domain\Interfaces\Entity\ValidateEntityInterface;
+use ZnCore\Domain\Interfaces\Entity\ValidateEntityByMetadataInterface;
 use ZnCore\Domain\Interfaces\Entity\EntityIdInterface;
 
-class TagEntity implements ValidateEntityInterface, EntityIdInterface
+class TagEntity implements ValidateEntityByMetadataInterface, EntityIdInterface
 {
 
     private $id = null;
@@ -16,19 +17,9 @@ class TagEntity implements ValidateEntityInterface, EntityIdInterface
     private $soundex = null;
     private $metaphone = null;
 
-    public function validationRules()
+    public static function loadValidatorMetadata(ClassMetadata $metadata)
     {
-        return [
-            /*'id' => [
-                new Assert\NotBlank,
-            ],
-            'parentId' => [
-                new Assert\NotBlank,
-            ],
-            'word' => [
-                new Assert\NotBlank,
-            ],*/
-        ];
+
     }
 
     public function setId($value) : void
