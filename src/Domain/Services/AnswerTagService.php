@@ -12,12 +12,12 @@ class AnswerTagService extends BaseCrudService implements AnswerTagServiceInterf
 
     public function __construct(AnswerTagRepositoryInterface $repository)
     {
-        $this->repository = $repository;
+        $this->setRepository($repository);
     }
 
     public function answerIdsByTagIds(array $tagIds): array
     {
-        $collection = $this->repository->allByTagIds($tagIds);
+        $collection = $this->getRepository()->allByTagIds($tagIds);
         return EntityHelper::getColumn($collection, 'answerId');
     }
 }

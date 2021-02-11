@@ -13,18 +13,18 @@ class AnswerService extends BaseCrudService implements AnswerServiceInterface
 
     public function __construct(AnswerRepositoryInterface $repository)
     {
-        $this->repository = $repository;
+        $this->setRepository($repository);
     }
 
     public function oneByRequestTextOrCreate(string $word): AnswerEntity
     {
         $query = new Query;
         $query->where('request_text', $word);
-        $collection = $this->repository->all($query);
+        $collection = $this->getRepository()->all($query);
         if ($collection->count() === 0) {
             $entity = $this->createEntity();
             $entity->setRequestText($word);
-            $this->repository->create($entity);
+            $this->getRepository()->create($entity);
         } else {
             $entity = $collection->first();
         }

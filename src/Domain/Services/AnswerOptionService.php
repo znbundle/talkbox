@@ -12,7 +12,7 @@ class AnswerOptionService extends BaseCrudService implements AnswerOptionService
 
     public function __construct(AnswerOptionRepositoryInterface $repository)
     {
-        $this->repository = $repository;
+        $this->setRepository($repository);
     }
 
     public function allByAnswerIds(array $answerIds)

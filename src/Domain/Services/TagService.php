@@ -21,7 +21,7 @@ class TagService extends BaseCrudService implements TagServiceInterface
 
     public function __construct(TagRepositoryInterface $repository)
     {
-        $this->repository = $repository;
+        $this->setRepository($repository);
     }
 
     public function import(Container $container)
@@ -121,11 +121,11 @@ class TagService extends BaseCrudService implements TagServiceInterface
     {
         $query = new Query;
         $query->where('word', $word);
-        $collection = $this->repository->all($query);
+        $collection = $this->getRepository()->all($query);
         if ($collection->count() === 0) {
             $entity = $this->createEntity();
             $entity->setWord($word);
-            $this->repository->create($entity);
+            $this->getRepository()->create($entity);
         } else {
             $entity = $collection->first();
         }
