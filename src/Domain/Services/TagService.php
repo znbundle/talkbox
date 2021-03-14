@@ -13,14 +13,16 @@ use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use ZnCore\Domain\Base\BaseCrudService;
 use ZnCore\Domain\Entities\Query\Where;
 use ZnCore\Domain\Enums\OperatorEnum;
+use ZnCore\Domain\Interfaces\Libs\EntityManagerInterface;
 use ZnCore\Domain\Libs\Query;
 use ZnLib\Telegram\Domain\Libs\SoundexRuEn;
 
 class TagService extends BaseCrudService implements TagServiceInterface
 {
 
-    public function __construct(TagRepositoryInterface $repository)
+    public function __construct(EntityManagerInterface $em, TagRepositoryInterface $repository)
     {
+        $this->setEntityManager($em);
         $this->setRepository($repository);
     }
 

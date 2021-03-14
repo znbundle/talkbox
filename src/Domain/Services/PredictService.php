@@ -114,10 +114,12 @@ class PredictService
     {
         $answerIds = $this->answerIdsByWords($words);
         if (count($answerIds) > 1000) {
-            return null;
+            return [];
         }
         $optionCollection = $this->allOptionsByAnswerIds($answerIds, $words);
         $answerTextArray = EntityHelper::getColumn($optionCollection, 'text');
+
+       // dd($words);
         return $answerTextArray;
     }
 
