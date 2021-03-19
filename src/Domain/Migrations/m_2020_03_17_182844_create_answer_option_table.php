@@ -17,8 +17,8 @@ class m_2020_03_17_182844_create_answer_option_table extends BaseCreateTableMigr
         return function (Blueprint $table) {
             $table->integer('id')->autoIncrement()->comment('Идентификатор');
             $table->integer('answer_id')->comment('');
-            $table->string('sort')->comment('Сортировка');
-            $table->string('text')->comment('');
+            $table->integer('sort')->comment('Сортировка');
+            $table->text('text')->comment('');
             $table->unique(['answer_id', 'text']);
             $table
                 ->foreign('answer_id')
