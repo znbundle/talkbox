@@ -2,8 +2,8 @@
 
 return [
     [
-        'matcher' => new \ZnLib\Telegram\Domain\Matchers\AnyMatcher(),
-        'action' => new \ZnBundle\TalkBox\Telegram\Actions\DataBaseAction(),
+        'matcher' => \ZnLib\Telegram\Domain\Matchers\AnyMatcher::class,
+        'action' => \ZnBundle\TalkBox\Telegram\Actions\DataBaseAction::class,
         'help' => '
 Ифнобот реагирует, если понимает фразу.
 Он может ответить на распространенные вопросы, на пример:
