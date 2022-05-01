@@ -4,7 +4,7 @@ namespace ZnBundle\TalkBox\Domain\Repositories\Eloquent;
 
 use ZnBundle\TalkBox\Domain\Entities\TagEntity;
 use ZnBundle\TalkBox\Domain\Interfaces\Repositories\TagRepositoryInterface;
-use ZnLib\Db\Base\BaseEloquentCrudRepository;
+use ZnDatabase\Eloquent\Domain\Base\BaseEloquentCrudRepository;
 
 class TagRepository extends BaseEloquentCrudRepository implements TagRepositoryInterface
 {
@@ -19,11 +19,11 @@ class TagRepository extends BaseEloquentCrudRepository implements TagRepositoryI
         return TagEntity::class;
     }
 
-    public function relations()
+    /*public function relations2()
     {
         return [
 
         ];
-    }
+    }*/
 
 }

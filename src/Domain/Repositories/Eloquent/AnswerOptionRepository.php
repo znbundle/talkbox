@@ -4,7 +4,7 @@ namespace ZnBundle\TalkBox\Domain\Repositories\Eloquent;
 
 use ZnBundle\TalkBox\Domain\Entities\AnswerOptionEntity;
 use ZnBundle\TalkBox\Domain\Interfaces\Repositories\AnswerOptionRepositoryInterface;
-use ZnLib\Db\Base\BaseEloquentCrudRepository;
+use ZnDatabase\Eloquent\Domain\Base\BaseEloquentCrudRepository;
 
 class AnswerOptionRepository extends BaseEloquentCrudRepository implements AnswerOptionRepositoryInterface
 {
