@@ -6,7 +6,7 @@ use Symfony\Component\Validator\Mapping\ClassMetadata;
 use ZnLib\Telegram\Domain\Libs\SoundexRuEn;
 use Symfony\Component\Validator\Constraints as Assert;
 use ZnCore\Domain\Interfaces\Entity\ValidateEntityByMetadataInterface;
-use ZnCore\Domain\Interfaces\Entity\EntityIdInterface;
+use ZnCore\Contract\Domain\Interfaces\Entities\EntityIdInterface;
 
 class TagEntity implements ValidateEntityByMetadataInterface, EntityIdInterface
 {
