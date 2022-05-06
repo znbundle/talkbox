@@ -2,9 +2,8 @@
 
 namespace ZnBundle\TalkBox\Telegram\Actions;
 
-use ZnBundle\TalkBox\Domain\Helpers\WordHelper;
 use Illuminate\Container\Container;
-use ZnCore\Base\Exceptions\DeprecatedException;
+use ZnBundle\TalkBox\Domain\Helpers\WordHelper;
 use ZnCore\Base\Exceptions\NotFoundException;
 use ZnCore\Base\Helpers\StringHelper;
 use ZnLib\Telegram\Domain\Base\BaseAction;
