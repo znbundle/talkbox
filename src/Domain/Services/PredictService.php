@@ -8,7 +8,7 @@ use ZnBundle\TalkBox\Domain\Entities\AnswerEntity;
 use ZnBundle\TalkBox\Domain\Helpers\WordHelper;
 use ZnCore\Base\Exceptions\NotFoundException;
 use ZnCore\Base\Helpers\StringHelper;
-use ZnCore\Base\Libs\Container\ContainerAwareTrait;
+use ZnCore\Base\Libs\Container\Traits\ContainerAwareTrait;
 use ZnCore\Domain\Helpers\EntityHelper;
 use ZnLib\Telegram\Domain\Helpers\MatchHelper;
 
