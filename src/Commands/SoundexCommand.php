@@ -9,6 +9,7 @@ use Illuminate\Support\Collection;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use ZnCore\Base\Libs\Container\Helpers\ContainerHelper;
 
 class SoundexCommand extends Command
 {
@@ -18,7 +19,7 @@ class SoundexCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $output->writeln('<fg=white># Test</>');
-        $container = Container::getInstance();
+        $container = ContainerHelper::getContainer();
         /** @var TagService $answerService */
         $answerService = $container->get(TagService::class);
         /** @var TagEntity[] | Collection $collection */

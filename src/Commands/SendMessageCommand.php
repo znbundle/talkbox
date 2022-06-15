@@ -8,6 +8,7 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Command\Command;
+use ZnCore\Base\Libs\Container\Helpers\ContainerHelper;
 
 class SendMessageCommand extends Command
 {
@@ -24,7 +25,7 @@ class SendMessageCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $output->writeln('<fg=white># Send Message</>');
-        $container = Container::getInstance();
+        $container = ContainerHelper::getContainer();
         $api = $container->get(API::class);
         $api->messages->sendMessage([
             'peer' => $input->getArgument('login'),

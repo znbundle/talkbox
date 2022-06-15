@@ -8,6 +8,7 @@ use Illuminate\Container\Container;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use ZnCore\Base\Libs\Container\Helpers\ContainerHelper;
 
 class FreeDialogCommand extends Command
 {
@@ -17,7 +18,7 @@ class FreeDialogCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $output->writeln('<fg=white># Free Dialog</>');
-        $container = Container::getInstance();
+        $container = ContainerHelper::getContainer();
         $api = $container->get(API::class);
 
         $api->startAndLoop(DialogEventHandler::class);

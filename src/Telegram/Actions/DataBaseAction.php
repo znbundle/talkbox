@@ -6,6 +6,7 @@ use Illuminate\Container\Container;
 use ZnBundle\TalkBox\Domain\Helpers\WordHelper;
 use ZnCore\Base\Exceptions\NotFoundException;
 use ZnCore\Base\Helpers\StringHelper;
+use ZnCore\Base\Libs\Container\Helpers\ContainerHelper;
 use ZnLib\Telegram\Domain\Base\BaseAction;
 use ZnLib\Telegram\Domain\Entities\RequestEntity;
 use ZnLib\Telegram\Domain\Helpers\MatchHelper;
@@ -40,7 +41,7 @@ class DataBaseAction extends BaseAction
         $request = MatchHelper::prepareString($request);
         $words = StringHelper::getWordArray($request);
 
-        $container = Container::getInstance();
+        $container = ContainerHelper::getContainer();
         /** @var \ZnBundle\TalkBox\Domain\Services\PredictService $predictService */
         $predictService = $container->get(\ZnBundle\TalkBox\Domain\Services\PredictService::class);
         $answerText = $predictService->predict($words);

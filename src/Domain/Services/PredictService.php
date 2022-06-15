@@ -34,7 +34,8 @@ class PredictService
     {
         $text = MatchHelper::prepareString($text);
         $words = StringHelper::getWordArray($text);
-        $container = Container::getInstance();
+//        $container = Container::getInstance();
+        $container = $this->getContainer();
         $tagService = $container->get(TagService::class);
         $words = $tagService->normalizeWorlds($words);
         return $words;
@@ -50,8 +51,8 @@ class PredictService
 
     public function predict(array $words): string
     {
-        $container = Container::getInstance();
-
+//        $container = Container::getInstance();
+        $container = $this->getContainer();
         /** @var TagService $tagService */
         $tagService = $container->get(TagService::class);
         $words = $tagService->normalizeWorlds($words);
@@ -83,7 +84,8 @@ class PredictService
 
     private function answerIdsByWords(array $words): array
     {
-        $container = Container::getInstance();
+//        $container = Container::getInstance();
+        $container = $this->getContainer();
         $tagService = $container->get(TagService::class);
         $tagCollection = $tagService->allByWorlds($words);
         if ($tagCollection->count() < count($words)) {
@@ -97,7 +99,8 @@ class PredictService
 
     private function allOptionsByAnswerIds(array $answerIds, array $words): Collection
     {
-        $container = Container::getInstance();
+//        $container = Container::getInstance();
+        $container = $this->getContainer();
         $answerService = $container->get(AnswerService::class);
         $answerOptionService = $container->get(AnswerOptionService::class);
         /** @var Collection $answerCollection */
