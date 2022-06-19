@@ -8,8 +8,9 @@ use ZnBundle\TalkBox\Domain\Entities\TagEntity;
 use ZnBundle\TalkBox\Domain\Interfaces\Repositories\TagRepositoryInterface;
 use ZnBundle\TalkBox\Domain\Interfaces\Services\TagServiceInterface;
 use ZnBundle\TalkBox\Domain\Libs\Parser;
-use ZnCore\Base\Libs\Text\Helpers\StringHelper;
+
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
+use ZnCore\Base\Libs\Text\Helpers\TextHelper;
 use ZnCore\Domain\Base\BaseCrudService;
 use ZnCore\Domain\Entities\Query\Where;
 use ZnCore\Domain\Enums\OperatorEnum;
@@ -51,7 +52,7 @@ class TagService extends BaseCrudService implements TagServiceInterface
 
             echo PHP_EOL . $token . PHP_EOL;
             //$tags = explode(' ', $token);
-            $tags = StringHelper::getWordArray($token);
+            $tags = TextHelper::getWordArray($token);
             foreach ($tags as $tag) {
 
                 $tagEntity = $tagService->oneByWordOrCreate($tag);

@@ -2,13 +2,14 @@
 
 namespace ZnBundle\TalkBox\Domain\Libs;
 
+use ZnCore\Base\Libs\Text\Helpers\TextHelper;
 use ZnLib\Telegram\Domain\Helpers\MatchHelper;
-use ZnCore\Base\Libs\Text\Helpers\StringHelper;
+
 
 class Parser {
 
     public function parseFromText(string $text) {
-        $lines = StringHelper::textToLines($text);
+        $lines = TextHelper::textToLines($text);
         $collection = [];
         foreach ($lines as $line) {
             $arr = str_getcsv($line, '\\', '', '');

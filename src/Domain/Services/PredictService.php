@@ -7,8 +7,9 @@ use Illuminate\Support\Collection;
 use ZnBundle\TalkBox\Domain\Entities\AnswerEntity;
 use ZnBundle\TalkBox\Domain\Helpers\WordHelper;
 use ZnCore\Base\Exceptions\NotFoundException;
-use ZnCore\Base\Libs\Text\Helpers\StringHelper;
+
 use ZnCore\Base\Libs\Container\Traits\ContainerAwareTrait;
+use ZnCore\Base\Libs\Text\Helpers\TextHelper;
 use ZnCore\Domain\Helpers\EntityHelper;
 use ZnLib\Telegram\Domain\Helpers\MatchHelper;
 
@@ -33,7 +34,7 @@ class PredictService
     public function textToWords(string $text): array
     {
         $text = MatchHelper::prepareString($text);
-        $words = StringHelper::getWordArray($text);
+        $words = TextHelper::getWordArray($text);
 //        $container = Container::getInstance();
         $container = $this->getContainer();
         $tagService = $container->get(TagService::class);
@@ -44,7 +45,7 @@ class PredictService
     public function predictText(string $request): string
     {
         $request = MatchHelper::prepareString($request);
-        $words = StringHelper::getWordArray($request);
+        $words = TextHelper::getWordArray($request);
         $answerText = $this->predict($words);
         return $answerText;
     }
@@ -71,7 +72,7 @@ class PredictService
     {
         foreach ($answerCollection as $answerEntity) {
             $text = MatchHelper::prepareString($answerEntity->getRequestText());
-            $tags = StringHelper::getWordArray($text);
+            $tags = TextHelper::getWordArray($text);
             if (count($tags) == count($words)) {
                 $isEqual = empty(array_diff($tags, $words));
                 if ($isEqual) {
