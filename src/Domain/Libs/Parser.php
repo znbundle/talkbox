@@ -3,7 +3,7 @@
 namespace ZnBundle\TalkBox\Domain\Libs;
 
 use ZnLib\Telegram\Domain\Helpers\MatchHelper;
-use ZnCore\Base\Helpers\StringHelper;
+use ZnCore\Base\Libs\Text\Helpers\StringHelper;
 
 class Parser {
 

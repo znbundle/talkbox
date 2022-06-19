@@ -8,7 +8,7 @@ use ZnBundle\TalkBox\Domain\Entities\TagEntity;
 use ZnBundle\TalkBox\Domain\Interfaces\Repositories\TagRepositoryInterface;
 use ZnBundle\TalkBox\Domain\Interfaces\Services\TagServiceInterface;
 use ZnBundle\TalkBox\Domain\Libs\Parser;
-use ZnCore\Base\Helpers\StringHelper;
+use ZnCore\Base\Libs\Text\Helpers\StringHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use ZnCore\Domain\Base\BaseCrudService;
 use ZnCore\Domain\Entities\Query\Where;
