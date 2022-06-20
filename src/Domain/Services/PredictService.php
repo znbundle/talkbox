@@ -9,6 +9,7 @@ use ZnBundle\TalkBox\Domain\Helpers\WordHelper;
 use ZnCore\Base\Exceptions\NotFoundException;
 
 use ZnCore\Base\Libs\Container\Traits\ContainerAwareTrait;
+use ZnCore\Base\Libs\Entity\Helpers\CollectionHelper;
 use ZnCore\Base\Libs\Text\Helpers\TextHelper;
 use ZnCore\Base\Libs\Entity\Helpers\EntityHelper;
 use ZnLib\Telegram\Domain\Helpers\MatchHelper;
@@ -92,7 +93,7 @@ class PredictService
         if ($tagCollection->count() < count($words)) {
             throw new NotFoundException('answerIdsByWords');
         }
-        $tagIds = EntityHelper::getColumn($tagCollection, 'id');
+        $tagIds = CollectionHelper::getColumn($tagCollection, 'id');
         $answerTagService = $container->get(AnswerTagService::class);
         $answerIds = $answerTagService->answerIdsByTagIds($tagIds);
         return $answerIds;
@@ -121,7 +122,7 @@ class PredictService
             return [];
         }
         $optionCollection = $this->allOptionsByAnswerIds($answerIds, $words);
-        $answerTextArray = EntityHelper::getColumn($optionCollection, 'text');
+        $answerTextArray = CollectionHelper::getColumn($optionCollection, 'text');
 
        // dd($words);
         return $answerTextArray;

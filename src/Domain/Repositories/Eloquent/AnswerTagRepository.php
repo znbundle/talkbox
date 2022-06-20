@@ -5,6 +5,7 @@ namespace ZnBundle\TalkBox\Domain\Repositories\Eloquent;
 use Illuminate\Support\Collection;
 use ZnBundle\TalkBox\Domain\Entities\AnswerTagEntity;
 use ZnBundle\TalkBox\Domain\Interfaces\Repositories\AnswerTagRepositoryInterface;
+use ZnCore\Base\Libs\Entity\Helpers\CollectionHelper;
 use ZnDatabase\Eloquent\Domain\Base\BaseEloquentCrudRepository;
 use ZnCore\Base\Libs\Entity\Helpers\EntityHelper;
 
@@ -37,7 +38,7 @@ class AnswerTagRepository extends BaseEloquentCrudRepository implements AnswerTa
             ->havingRaw('COUNT(*) = ' . count($tagIds))
             ->get();
         $entityClass = $this->getEntityClass();
-        $collection = EntityHelper::createEntityCollection($entityClass, $array->toArray());
+        $collection = CollectionHelper::create($entityClass, $array->toArray());
         return $collection;
     }
 
