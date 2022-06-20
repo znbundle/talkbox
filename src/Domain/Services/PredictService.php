@@ -10,7 +10,7 @@ use ZnCore\Base\Exceptions\NotFoundException;
 
 use ZnCore\Base\Libs\Container\Traits\ContainerAwareTrait;
 use ZnCore\Base\Libs\Text\Helpers\TextHelper;
-use ZnCore\Domain\Helpers\EntityHelper;
+use ZnCore\Base\Libs\Entity\Helpers\EntityHelper;
 use ZnLib\Telegram\Domain\Helpers\MatchHelper;
 
 class PredictService

@@ -6,7 +6,7 @@ use Illuminate\Support\Collection;
 use ZnBundle\TalkBox\Domain\Entities\AnswerTagEntity;
 use ZnBundle\TalkBox\Domain\Interfaces\Repositories\AnswerTagRepositoryInterface;
 use ZnDatabase\Eloquent\Domain\Base\BaseEloquentCrudRepository;
-use ZnCore\Domain\Helpers\EntityHelper;
+use ZnCore\Base\Libs\Entity\Helpers\EntityHelper;
 
 class AnswerTagRepository extends BaseEloquentCrudRepository implements AnswerTagRepositoryInterface
 {
