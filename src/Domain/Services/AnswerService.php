@@ -5,7 +5,7 @@ namespace ZnBundle\TalkBox\Domain\Services;
 use ZnBundle\TalkBox\Domain\Entities\AnswerEntity;
 use ZnBundle\TalkBox\Domain\Interfaces\Repositories\AnswerRepositoryInterface;
 use ZnBundle\TalkBox\Domain\Interfaces\Services\AnswerServiceInterface;
-use ZnCore\Domain\Base\BaseCrudService;
+use ZnCore\Base\Libs\Service\Base\BaseCrudService;
 use ZnCore\Base\Libs\Query\Entities\Query;
 
 class AnswerService extends BaseCrudService implements AnswerServiceInterface

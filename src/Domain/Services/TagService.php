@@ -11,7 +11,7 @@ use ZnBundle\TalkBox\Domain\Libs\Parser;
 
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use ZnCore\Base\Libs\Text\Helpers\TextHelper;
-use ZnCore\Domain\Base\BaseCrudService;
+use ZnCore\Base\Libs\Service\Base\BaseCrudService;
 use ZnCore\Base\Libs\Query\Entities\Where;
 use ZnCore\Base\Libs\Query\Enums\OperatorEnum;
 use ZnCore\Base\Libs\EntityManager\Interfaces\EntityManagerInterface;

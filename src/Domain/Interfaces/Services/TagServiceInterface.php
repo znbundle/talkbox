@@ -4,7 +4,7 @@ namespace ZnBundle\TalkBox\Domain\Interfaces\Services;
 
 use ZnBundle\TalkBox\Domain\Entities\TagEntity;
 use Illuminate\Support\Collection;
-use ZnCore\Domain\Interfaces\Service\CrudServiceInterface;
+use ZnCore\Base\Libs\Service\Interfaces\CrudServiceInterface;
 use ZnCore\Base\Libs\Query\Entities\Query;
 
 interface TagServiceInterface extends CrudServiceInterface

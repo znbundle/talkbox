@@ -4,7 +4,7 @@ namespace ZnBundle\TalkBox\Domain\Services;
 
 use ZnBundle\TalkBox\Domain\Interfaces\Repositories\AnswerOptionRepositoryInterface;
 use ZnBundle\TalkBox\Domain\Interfaces\Services\AnswerOptionServiceInterface;
-use ZnCore\Domain\Base\BaseCrudService;
+use ZnCore\Base\Libs\Service\Base\BaseCrudService;
 use ZnCore\Base\Libs\Query\Entities\Query;
 
 class AnswerOptionService extends BaseCrudService implements AnswerOptionServiceInterface
