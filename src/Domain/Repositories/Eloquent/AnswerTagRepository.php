@@ -5,9 +5,9 @@ namespace ZnBundle\TalkBox\Domain\Repositories\Eloquent;
 use Illuminate\Support\Collection;
 use ZnBundle\TalkBox\Domain\Entities\AnswerTagEntity;
 use ZnBundle\TalkBox\Domain\Interfaces\Repositories\AnswerTagRepositoryInterface;
-use ZnCore\Base\Libs\Entity\Helpers\CollectionHelper;
+use ZnCore\Domain\Entity\Helpers\CollectionHelper;
 use ZnDatabase\Eloquent\Domain\Base\BaseEloquentCrudRepository;
-use ZnCore\Base\Libs\Entity\Helpers\EntityHelper;
+use ZnCore\Domain\Entity\Helpers\EntityHelper;
 
 class AnswerTagRepository extends BaseEloquentCrudRepository implements AnswerTagRepositoryInterface
 {

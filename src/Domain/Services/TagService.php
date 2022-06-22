@@ -11,11 +11,11 @@ use ZnBundle\TalkBox\Domain\Libs\Parser;
 
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use ZnCore\Base\Libs\Text\Helpers\TextHelper;
-use ZnCore\Base\Libs\Service\Base\BaseCrudService;
-use ZnCore\Base\Libs\Query\Entities\Where;
-use ZnCore\Base\Libs\Query\Enums\OperatorEnum;
-use ZnCore\Base\Libs\EntityManager\Interfaces\EntityManagerInterface;
-use ZnCore\Base\Libs\Query\Entities\Query;
+use ZnCore\Domain\Service\Base\BaseCrudService;
+use ZnCore\Domain\Query\Entities\Where;
+use ZnCore\Domain\Query\Enums\OperatorEnum;
+use ZnCore\Domain\EntityManager\Interfaces\EntityManagerInterface;
+use ZnCore\Domain\Query\Entities\Query;
 use ZnLib\Telegram\Domain\Libs\SoundexRuEn;
 
 class TagService extends BaseCrudService implements TagServiceInterface
