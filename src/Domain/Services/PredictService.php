@@ -8,9 +8,9 @@ use ZnBundle\TalkBox\Domain\Entities\AnswerEntity;
 use ZnBundle\TalkBox\Domain\Helpers\WordHelper;
 use ZnCore\Domain\Entity\Exceptions\NotFoundException;
 
-use ZnCore\Base\Libs\Container\Traits\ContainerAwareTrait;
+use ZnCore\Base\Container\Traits\ContainerAwareTrait;
 use ZnCore\Domain\Entity\Helpers\CollectionHelper;
-use ZnCore\Base\Libs\Text\Helpers\TextHelper;
+use ZnCore\Base\Text\Helpers\TextHelper;
 use ZnCore\Domain\Entity\Helpers\EntityHelper;
 use ZnLib\Telegram\Domain\Helpers\MatchHelper;
 

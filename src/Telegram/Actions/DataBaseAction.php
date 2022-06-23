@@ -6,8 +6,8 @@ use Illuminate\Container\Container;
 use ZnBundle\TalkBox\Domain\Helpers\WordHelper;
 use ZnCore\Domain\Entity\Exceptions\NotFoundException;
 
-use ZnCore\Base\Libs\Container\Helpers\ContainerHelper;
-use ZnCore\Base\Libs\Text\Helpers\TextHelper;
+use ZnCore\Base\Container\Helpers\ContainerHelper;
+use ZnCore\Base\Text\Helpers\TextHelper;
 use ZnLib\Telegram\Domain\Base\BaseAction;
 use ZnLib\Telegram\Domain\Entities\RequestEntity;
 use ZnLib\Telegram\Domain\Helpers\MatchHelper;

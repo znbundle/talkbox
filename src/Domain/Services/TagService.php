@@ -9,8 +9,8 @@ use ZnBundle\TalkBox\Domain\Interfaces\Repositories\TagRepositoryInterface;
 use ZnBundle\TalkBox\Domain\Interfaces\Services\TagServiceInterface;
 use ZnBundle\TalkBox\Domain\Libs\Parser;
 
-use ZnCore\Base\Libs\Arr\Helpers\ArrayHelper;
-use ZnCore\Base\Libs\Text\Helpers\TextHelper;
+use ZnCore\Base\Arr\Helpers\ArrayHelper;
+use ZnCore\Base\Text\Helpers\TextHelper;
 use ZnCore\Domain\Service\Base\BaseCrudService;
 use ZnCore\Domain\Query\Entities\Where;
 use ZnCore\Domain\Query\Enums\OperatorEnum;

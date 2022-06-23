@@ -8,7 +8,7 @@ use Illuminate\Container\Container;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use ZnCore\Base\Libs\Container\Helpers\ContainerHelper;
+use ZnCore\Base\Container\Helpers\ContainerHelper;
 
 class FreeDialogCommand extends Command
 {
