@@ -19,7 +19,7 @@ class TagRepository extends BaseEloquentCrudRepository implements TagRepositoryI
         return TagEntity::class;
     }
 
-    /*public function relations2()
+    /*public function relations()
     {
         return [
 

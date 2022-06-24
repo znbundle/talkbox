@@ -22,7 +22,7 @@ class AnswerTagRepository extends BaseEloquentCrudRepository implements AnswerTa
         return AnswerTagEntity::class;
     }
 
-   /* public function relations2()
+   /* public function relations()
     {
         return [
 
