@@ -23,7 +23,7 @@ class SoundexCommand extends Command
         /** @var TagService $answerService */
         $answerService = $container->get(TagService::class);
         /** @var TagEntity[] | Collection $collection */
-        $collection = $answerService->all();
+        $collection = $answerService->findAll();
         foreach ($collection as $tagEntity) {
             $answerService->updateById($tagEntity->getId(), [
                 'soundex' => $tagEntity->getSoundex(),

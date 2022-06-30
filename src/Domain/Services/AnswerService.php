@@ -20,7 +20,7 @@ class AnswerService extends BaseCrudService implements AnswerServiceInterface
     {
         $query = new Query;
         $query->where('request_text', $word);
-        $collection = $this->getRepository()->all($query);
+        $collection = $this->getRepository()->findAll($query);
         if ($collection->count() === 0) {
             $entity = $this->createEntity();
             $entity->setRequestText($word);

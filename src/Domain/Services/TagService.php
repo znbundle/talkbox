@@ -124,7 +124,7 @@ class TagService extends BaseCrudService implements TagServiceInterface
     {
         $query = new Query;
         $query->where('word', $word);
-        $collection = $this->getRepository()->all($query);
+        $collection = $this->getRepository()->findAll($query);
         if ($collection->count() === 0) {
             $entity = $this->createEntity();
             $entity->setWord($word);
