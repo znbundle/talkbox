@@ -48,7 +48,7 @@ class TagService extends BaseCrudService implements TagServiceInterface
 
         foreach ($collection as $token => $answer) {
 
-            $answerEntity = $answerService->oneByRequestTextOrCreate($token);
+            $answerEntity = $answerService->findOneByRequestTextOrCreate($token);
 
             echo PHP_EOL . $token . PHP_EOL;
             //$tags = explode(' ', $token);

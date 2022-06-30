@@ -16,7 +16,7 @@ class AnswerService extends BaseCrudService implements AnswerServiceInterface
         $this->setRepository($repository);
     }
 
-    public function oneByRequestTextOrCreate(string $word): AnswerEntity
+    public function findOneByRequestTextOrCreate(string $word): AnswerEntity
     {
         $query = new Query;
         $query->where('request_text', $word);

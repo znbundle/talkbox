@@ -8,7 +8,7 @@ use ZnCore\Domain\Service\Interfaces\CrudServiceInterface;
 interface AnswerServiceInterface extends CrudServiceInterface
 {
 
-    public function oneByRequestTextOrCreate(string $word): AnswerEntity;
+    public function findOneByRequestTextOrCreate(string $word): AnswerEntity;
 
 }
 
