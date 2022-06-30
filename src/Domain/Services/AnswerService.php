@@ -35,7 +35,7 @@ class AnswerService extends BaseCrudService implements AnswerServiceInterface
     {
         $query = new Query;
         $query->where('id', $answerIds);
-        return parent::all($query);
+        return parent::findAll($query);
     }
 
 }

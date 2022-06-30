@@ -104,7 +104,7 @@ class TagService extends BaseCrudService implements TagServiceInterface
             $query->whereNew(new Where('soundex', $soundex->encodeSoundex($word), OperatorEnum::EQUAL, 'or'));
             $query->whereNew(new Where('metaphone', $soundex->encodeMetaphone($word), OperatorEnum::EQUAL, 'or'));
             /** @var TagEntity[] | Collection $tagCollection */
-            $tagCollection = parent::all($query);
+            $tagCollection = parent::findAll($query);
             if ($tagCollection->count() > 0) {
                 $newWords[] = $this->filterTagCollection($word, $tagCollection);
             }
@@ -117,7 +117,7 @@ class TagService extends BaseCrudService implements TagServiceInterface
         $query = new Query;
         $query->with(['answer']);
         $query->where('word', $words);
-        return parent::all($query);
+        return parent::findAll($query);
     }
 
     public function oneByWordOrCreate(string $word): TagEntity

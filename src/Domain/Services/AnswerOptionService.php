@@ -22,6 +22,6 @@ class AnswerOptionService extends BaseCrudService implements AnswerOptionService
         $query->orderBy([
             'sort' => SORT_ASC,
         ]);
-        return parent::all($query);
+        return parent::findAll($query);
     }
 }
