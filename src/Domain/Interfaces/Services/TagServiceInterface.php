@@ -11,5 +11,5 @@ interface TagServiceInterface extends CrudServiceInterface
 {
 
     public function allByWorlds(array $words, Query $query = null): Collection;
-    public function oneByWordOrCreate(string $word): TagEntity;
+    public function findOneByWordOrCreate(string $word): TagEntity;
 }

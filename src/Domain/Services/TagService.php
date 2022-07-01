@@ -55,7 +55,7 @@ class TagService extends BaseCrudService implements TagServiceInterface
             $tags = TextHelper::getWordArray($token);
             foreach ($tags as $tag) {
 
-                $tagEntity = $tagService->oneByWordOrCreate($tag);
+                $tagEntity = $tagService->findOneByWordOrCreate($tag);
 
                 try {
                     $answerTagService->create([
@@ -120,7 +120,7 @@ class TagService extends BaseCrudService implements TagServiceInterface
         return parent::findAll($query);
     }
 
-    public function oneByWordOrCreate(string $word): TagEntity
+    public function findOneByWordOrCreate(string $word): TagEntity
     {
         $query = new Query;
         $query->where('word', $word);
