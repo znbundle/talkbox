@@ -3,7 +3,7 @@
 namespace ZnBundle\TalkBox\Domain\Services;
 
 use Illuminate\Contracts\Container\Container;
-use Illuminate\Support\Collection;
+use ZnCore\Domain\Collection\Libs\Collection;
 use ZnBundle\TalkBox\Domain\Entities\TagEntity;
 use ZnBundle\TalkBox\Domain\Interfaces\Repositories\TagRepositoryInterface;
 use ZnBundle\TalkBox\Domain\Interfaces\Services\TagServiceInterface;

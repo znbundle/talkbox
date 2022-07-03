@@ -3,7 +3,7 @@
 namespace ZnBundle\TalkBox\Domain\Services;
 
 use Illuminate\Container\Container;
-use Illuminate\Support\Collection;
+use ZnCore\Domain\Collection\Libs\Collection;
 use ZnBundle\TalkBox\Domain\Entities\AnswerEntity;
 use ZnBundle\TalkBox\Domain\Helpers\WordHelper;
 use ZnCore\Domain\Entity\Exceptions\NotFoundException;

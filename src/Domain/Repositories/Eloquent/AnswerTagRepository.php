@@ -2,7 +2,7 @@
 
 namespace ZnBundle\TalkBox\Domain\Repositories\Eloquent;
 
-use Illuminate\Support\Collection;
+use ZnCore\Domain\Collection\Libs\Collection;
 use ZnBundle\TalkBox\Domain\Entities\AnswerTagEntity;
 use ZnBundle\TalkBox\Domain\Interfaces\Repositories\AnswerTagRepositoryInterface;
 use ZnCore\Domain\Entity\Helpers\CollectionHelper;
