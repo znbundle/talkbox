@@ -2,7 +2,7 @@
 
 namespace ZnBundle\TalkBox\Domain\Services;
 
-use Illuminate\Container\Container;
+use ZnCore\Base\Container\Libs\Container;
 use ZnCore\Domain\Collection\Libs\Collection;
 use ZnBundle\TalkBox\Domain\Entities\AnswerEntity;
 use ZnBundle\TalkBox\Domain\Helpers\WordHelper;

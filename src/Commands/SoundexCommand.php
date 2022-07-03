@@ -4,7 +4,7 @@ namespace ZnBundle\TalkBox\Commands;
 
 use ZnBundle\TalkBox\Domain\Entities\TagEntity;
 use ZnBundle\TalkBox\Domain\Services\TagService;
-use Illuminate\Container\Container;
+use ZnCore\Base\Container\Libs\Container;
 use ZnCore\Domain\Collection\Libs\Collection;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;

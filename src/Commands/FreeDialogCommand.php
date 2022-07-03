@@ -4,7 +4,7 @@ namespace ZnBundle\TalkBox\Commands;
 
 use ZnBundle\TalkBox\Domain\__Handlers\DialogEventHandler;
 use danog\MadelineProto\API;
-use Illuminate\Container\Container;
+use ZnCore\Base\Container\Libs\Container;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
