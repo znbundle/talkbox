@@ -3,6 +3,7 @@
 namespace ZnBundle\TalkBox\Domain\Services;
 
 use Illuminate\Contracts\Container\Container;
+use ZnCore\Domain\Collection\Interfaces\Enumerable;
 use ZnCore\Domain\Collection\Libs\Collection;
 use ZnBundle\TalkBox\Domain\Entities\TagEntity;
 use ZnBundle\TalkBox\Domain\Interfaces\Repositories\TagRepositoryInterface;
@@ -112,7 +113,7 @@ class TagService extends BaseCrudService implements TagServiceInterface
         return $newWords;
     }
 
-    public function allByWorlds(array $words, Query $query = null): Collection
+    public function allByWorlds(array $words, Query $query = null): Enumerable
     {
         $query = new Query;
         $query->with(['answer']);

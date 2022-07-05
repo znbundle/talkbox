@@ -3,6 +3,7 @@
 namespace ZnBundle\TalkBox\Domain\Services;
 
 use ZnCore\Base\Container\Libs\Container;
+use ZnCore\Domain\Collection\Interfaces\Enumerable;
 use ZnCore\Domain\Collection\Libs\Collection;
 use ZnBundle\TalkBox\Domain\Entities\AnswerEntity;
 use ZnBundle\TalkBox\Domain\Helpers\WordHelper;
@@ -99,7 +100,7 @@ class PredictService
         return $answerIds;
     }
 
-    private function allOptionsByAnswerIds(array $answerIds, array $words): Collection
+    private function allOptionsByAnswerIds(array $answerIds, array $words): Enumerable
     {
 //        $container = Container::getInstance();
         $container = $this->getContainer();

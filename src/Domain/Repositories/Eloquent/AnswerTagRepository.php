@@ -2,6 +2,7 @@
 
 namespace ZnBundle\TalkBox\Domain\Repositories\Eloquent;
 
+use ZnCore\Domain\Collection\Interfaces\Enumerable;
 use ZnCore\Domain\Collection\Libs\Collection;
 use ZnBundle\TalkBox\Domain\Entities\AnswerTagEntity;
 use ZnBundle\TalkBox\Domain\Interfaces\Repositories\AnswerTagRepositoryInterface;
@@ -29,7 +30,7 @@ class AnswerTagRepository extends BaseEloquentCrudRepository implements AnswerTa
         ];
     }*/
 
-    public function allByTagIds(array $tagIds): Collection
+    public function allByTagIds(array $tagIds): Enumerable
     {
         $array = $this->getQueryBuilder()
             ->select(['answer_id'])
