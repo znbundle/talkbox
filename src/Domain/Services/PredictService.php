@@ -70,7 +70,7 @@ class PredictService
         return $answerTextArray[$index];
     }
 
-    private function findEqual(Collection $answerCollection, array $words): AnswerEntity
+    private function findEqual(Enumerable $answerCollection, array $words): AnswerEntity
     {
         foreach ($answerCollection as $answerEntity) {
             $text = MatchHelper::prepareString($answerEntity->getRequestText());
