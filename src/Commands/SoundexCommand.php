@@ -2,14 +2,13 @@
 
 namespace ZnBundle\TalkBox\Commands;
 
-use ZnBundle\TalkBox\Domain\Entities\TagEntity;
-use ZnBundle\TalkBox\Domain\Services\TagService;
-use ZnCore\Base\Container\Libs\Container;
-use ZnCore\Domain\Collection\Libs\Collection;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use ZnBundle\TalkBox\Domain\Entities\TagEntity;
+use ZnBundle\TalkBox\Domain\Services\TagService;
 use ZnCore\Base\Container\Helpers\ContainerHelper;
+use ZnCore\Domain\Collection\Interfaces\Enumerable;
 
 class SoundexCommand extends Command
 {
@@ -22,7 +21,7 @@ class SoundexCommand extends Command
         $container = ContainerHelper::getContainer();
         /** @var TagService $answerService */
         $answerService = $container->get(TagService::class);
-        /** @var TagEntity[] | Collection $collection */
+        /** @var TagEntity[] | Enumerable $collection */
         $collection = $answerService->findAll();
         foreach ($collection as $tagEntity) {
             $answerService->updateById($tagEntity->getId(), [

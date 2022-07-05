@@ -3,20 +3,19 @@
 namespace ZnBundle\TalkBox\Domain\Services;
 
 use Illuminate\Contracts\Container\Container;
-use ZnCore\Domain\Collection\Interfaces\Enumerable;
-use ZnCore\Domain\Collection\Libs\Collection;
 use ZnBundle\TalkBox\Domain\Entities\TagEntity;
 use ZnBundle\TalkBox\Domain\Interfaces\Repositories\TagRepositoryInterface;
 use ZnBundle\TalkBox\Domain\Interfaces\Services\TagServiceInterface;
 use ZnBundle\TalkBox\Domain\Libs\Parser;
-
 use ZnCore\Base\Arr\Helpers\ArrayHelper;
 use ZnCore\Base\Text\Helpers\TextHelper;
-use ZnCore\Domain\Service\Base\BaseCrudService;
-use ZnCore\Domain\Query\Entities\Where;
-use ZnCore\Domain\Query\Enums\OperatorEnum;
+use ZnCore\Domain\Collection\Interfaces\Enumerable;
+use ZnCore\Domain\Collection\Libs\Collection;
 use ZnCore\Domain\EntityManager\Interfaces\EntityManagerInterface;
 use ZnCore\Domain\Query\Entities\Query;
+use ZnCore\Domain\Query\Entities\Where;
+use ZnCore\Domain\Query\Enums\OperatorEnum;
+use ZnCore\Domain\Service\Base\BaseCrudService;
 use ZnLib\Telegram\Domain\Libs\SoundexRuEn;
 
 class TagService extends BaseCrudService implements TagServiceInterface
@@ -79,7 +78,7 @@ class TagService extends BaseCrudService implements TagServiceInterface
         }
     }
 
-    private function filterTagCollection(string $word, Collection $tagCollection): string
+    private function filterTagCollection(string $word, Enumerable $tagCollection): string
     {
         if ($tagCollection->count() > 1) {
             $ratingByLevenshtein = [];
@@ -104,7 +103,7 @@ class TagService extends BaseCrudService implements TagServiceInterface
             $query = new Query;
             $query->whereNew(new Where('soundex', $soundex->encodeSoundex($word), OperatorEnum::EQUAL, 'or'));
             $query->whereNew(new Where('metaphone', $soundex->encodeMetaphone($word), OperatorEnum::EQUAL, 'or'));
-            /** @var TagEntity[] | Collection $tagCollection */
+            /** @var TagEntity[] | Enumerable $tagCollection */
             $tagCollection = parent::findAll($query);
             if ($tagCollection->count() > 0) {
                 $newWords[] = $this->filterTagCollection($word, $tagCollection);

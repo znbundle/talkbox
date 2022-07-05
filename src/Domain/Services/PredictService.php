@@ -2,17 +2,13 @@
 
 namespace ZnBundle\TalkBox\Domain\Services;
 
-use ZnCore\Base\Container\Libs\Container;
-use ZnCore\Domain\Collection\Interfaces\Enumerable;
-use ZnCore\Domain\Collection\Libs\Collection;
 use ZnBundle\TalkBox\Domain\Entities\AnswerEntity;
 use ZnBundle\TalkBox\Domain\Helpers\WordHelper;
-use ZnCore\Domain\Entity\Exceptions\NotFoundException;
-
 use ZnCore\Base\Container\Traits\ContainerAwareTrait;
-use ZnCore\Domain\Entity\Helpers\CollectionHelper;
 use ZnCore\Base\Text\Helpers\TextHelper;
-use ZnCore\Domain\Entity\Helpers\EntityHelper;
+use ZnCore\Domain\Collection\Interfaces\Enumerable;
+use ZnCore\Domain\Entity\Exceptions\NotFoundException;
+use ZnCore\Domain\Entity\Helpers\CollectionHelper;
 use ZnLib\Telegram\Domain\Helpers\MatchHelper;
 
 class PredictService
@@ -106,7 +102,7 @@ class PredictService
         $container = $this->getContainer();
         $answerService = $container->get(AnswerService::class);
         $answerOptionService = $container->get(AnswerOptionService::class);
-        /** @var Collection $answerCollection */
+        /** @var Enumerable $answerCollection */
         $answerCollection = $answerService->allByIds($answerIds);
         $wordEntity = $this->findEqual($answerCollection, $words);
         if (empty($wordEntity)) {
@@ -125,7 +121,7 @@ class PredictService
         $optionCollection = $this->allOptionsByAnswerIds($answerIds, $words);
         $answerTextArray = CollectionHelper::getColumn($optionCollection, 'text');
 
-       // dd($words);
+        // dd($words);
         return $answerTextArray;
     }
 
