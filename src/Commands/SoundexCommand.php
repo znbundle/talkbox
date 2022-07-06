@@ -7,8 +7,8 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use ZnBundle\TalkBox\Domain\Entities\TagEntity;
 use ZnBundle\TalkBox\Domain\Services\TagService;
-use ZnCore\Base\Container\Helpers\ContainerHelper;
-use ZnCore\Domain\Collection\Interfaces\Enumerable;
+use ZnCore\Container\Helpers\ContainerHelper;
+use ZnCore\Collection\Interfaces\Enumerable;
 
 class SoundexCommand extends Command
 {

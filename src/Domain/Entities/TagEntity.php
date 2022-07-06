@@ -5,8 +5,8 @@ namespace ZnBundle\TalkBox\Domain\Entities;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
 use ZnLib\Telegram\Domain\Libs\SoundexRuEn;
 use Symfony\Component\Validator\Constraints as Assert;
-use ZnCore\Base\Validation\Interfaces\ValidationByMetadataInterface;
-use ZnCore\Domain\Entity\Interfaces\EntityIdInterface;
+use ZnCore\Validation\Interfaces\ValidationByMetadataInterface;
+use ZnCore\Entity\Interfaces\EntityIdInterface;
 
 class TagEntity implements ValidationByMetadataInterface, EntityIdInterface
 {

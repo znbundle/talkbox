@@ -4,11 +4,11 @@ namespace ZnBundle\TalkBox\Domain\Services;
 
 use ZnBundle\TalkBox\Domain\Entities\AnswerEntity;
 use ZnBundle\TalkBox\Domain\Helpers\WordHelper;
-use ZnCore\Base\Container\Traits\ContainerAwareTrait;
-use ZnCore\Base\Text\Helpers\TextHelper;
-use ZnCore\Domain\Collection\Interfaces\Enumerable;
-use ZnCore\Domain\Entity\Exceptions\NotFoundException;
-use ZnCore\Domain\Entity\Helpers\CollectionHelper;
+use ZnCore\Container\Traits\ContainerAwareTrait;
+use ZnCore\Text\Helpers\TextHelper;
+use ZnCore\Collection\Interfaces\Enumerable;
+use ZnCore\Entity\Exceptions\NotFoundException;
+use ZnCore\Entity\Helpers\CollectionHelper;
 use ZnLib\Telegram\Domain\Helpers\MatchHelper;
 
 class PredictService

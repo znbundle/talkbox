@@ -2,12 +2,12 @@
 
 namespace ZnBundle\TalkBox\Telegram\Actions;
 
-use ZnCore\Base\Container\Libs\Container;
+use ZnCore\Container\Libs\Container;
 use ZnBundle\TalkBox\Domain\Helpers\WordHelper;
-use ZnCore\Domain\Entity\Exceptions\NotFoundException;
+use ZnCore\Entity\Exceptions\NotFoundException;
 
-use ZnCore\Base\Container\Helpers\ContainerHelper;
-use ZnCore\Base\Text\Helpers\TextHelper;
+use ZnCore\Container\Helpers\ContainerHelper;
+use ZnCore\Text\Helpers\TextHelper;
 use ZnLib\Telegram\Domain\Base\BaseAction;
 use ZnLib\Telegram\Domain\Entities\RequestEntity;
 use ZnLib\Telegram\Domain\Helpers\MatchHelper;

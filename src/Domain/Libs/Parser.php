@@ -2,7 +2,7 @@
 
 namespace ZnBundle\TalkBox\Domain\Libs;
 
-use ZnCore\Base\Text\Helpers\TextHelper;
+use ZnCore\Text\Helpers\TextHelper;
 use ZnLib\Telegram\Domain\Helpers\MatchHelper;
 
 
