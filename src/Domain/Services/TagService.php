@@ -7,14 +7,14 @@ use ZnBundle\TalkBox\Domain\Entities\TagEntity;
 use ZnBundle\TalkBox\Domain\Interfaces\Repositories\TagRepositoryInterface;
 use ZnBundle\TalkBox\Domain\Interfaces\Services\TagServiceInterface;
 use ZnBundle\TalkBox\Domain\Libs\Parser;
-use ZnCore\Base\Arr\Helpers\ArrayHelper;
+use ZnCore\Arr\Helpers\ArrayHelper;
 use ZnCore\Text\Helpers\TextHelper;
 use ZnCore\Collection\Interfaces\Enumerable;
 use ZnCore\EntityManager\Interfaces\EntityManagerInterface;
-use ZnCore\Domain\Query\Entities\Query;
-use ZnCore\Domain\Query\Entities\Where;
-use ZnCore\Domain\Query\Enums\OperatorEnum;
-use ZnCore\Domain\Service\Base\BaseCrudService;
+use ZnCore\Query\Entities\Query;
+use ZnCore\Query\Entities\Where;
+use ZnCore\Query\Enums\OperatorEnum;
+use ZnCore\Service\Base\BaseCrudService;
 use ZnLib\Telegram\Domain\Libs\SoundexRuEn;
 
 class TagService extends BaseCrudService implements TagServiceInterface
