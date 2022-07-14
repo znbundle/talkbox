@@ -5,7 +5,7 @@ namespace ZnBundle\TalkBox\Domain\Interfaces\Services;
 use ZnBundle\TalkBox\Domain\Entities\TagEntity;
 use ZnCore\Collection\Interfaces\Enumerable;
 use ZnCore\Query\Entities\Query;
-use ZnCore\Service\Interfaces\CrudServiceInterface;
+use ZnDomain\Service\Interfaces\CrudServiceInterface;
 
 interface TagServiceInterface extends CrudServiceInterface
 {

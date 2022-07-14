@@ -3,7 +3,7 @@
 namespace ZnBundle\TalkBox\Domain\Interfaces\Services;
 
 use ZnBundle\TalkBox\Domain\Entities\AnswerEntity;
-use ZnCore\Service\Interfaces\CrudServiceInterface;
+use ZnDomain\Service\Interfaces\CrudServiceInterface;
 
 interface AnswerServiceInterface extends CrudServiceInterface
 {

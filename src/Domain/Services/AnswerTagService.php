@@ -5,7 +5,7 @@ namespace ZnBundle\TalkBox\Domain\Services;
 use ZnBundle\TalkBox\Domain\Interfaces\Repositories\AnswerTagRepositoryInterface;
 use ZnBundle\TalkBox\Domain\Interfaces\Services\AnswerTagServiceInterface;
 use ZnCore\Entity\Helpers\CollectionHelper;
-use ZnCore\Service\Base\BaseCrudService;
+use ZnDomain\Service\Base\BaseCrudService;
 use ZnCore\Entity\Helpers\EntityHelper;
 
 class AnswerTagService extends BaseCrudService implements AnswerTagServiceInterface

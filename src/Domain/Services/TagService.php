@@ -10,11 +10,11 @@ use ZnBundle\TalkBox\Domain\Libs\Parser;
 use ZnCore\Arr\Helpers\ArrayHelper;
 use ZnCore\Text\Helpers\TextHelper;
 use ZnCore\Collection\Interfaces\Enumerable;
-use ZnCore\EntityManager\Interfaces\EntityManagerInterface;
+use ZnDomain\EntityManager\Interfaces\EntityManagerInterface;
 use ZnCore\Query\Entities\Query;
 use ZnCore\Query\Entities\Where;
 use ZnCore\Query\Enums\OperatorEnum;
-use ZnCore\Service\Base\BaseCrudService;
+use ZnDomain\Service\Base\BaseCrudService;
 use ZnLib\Telegram\Domain\Libs\SoundexRuEn;
 
 class TagService extends BaseCrudService implements TagServiceInterface
