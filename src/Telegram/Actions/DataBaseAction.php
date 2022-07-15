@@ -4,7 +4,7 @@ namespace ZnBundle\TalkBox\Telegram\Actions;
 
 use ZnCore\Container\Libs\Container;
 use ZnBundle\TalkBox\Domain\Helpers\WordHelper;
-use ZnDomain\Entity\Exceptions\NotFoundException;
+use ZnCore\Contract\Common\Exceptions\NotFoundException;
 
 use ZnCore\Container\Helpers\ContainerHelper;
 use ZnCore\Text\Helpers\TextHelper;

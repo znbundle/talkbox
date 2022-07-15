@@ -4,7 +4,7 @@ namespace ZnBundle\TalkBox\Domain\Services;
 
 use ZnBundle\TalkBox\Domain\Interfaces\Repositories\AnswerTagRepositoryInterface;
 use ZnBundle\TalkBox\Domain\Interfaces\Services\AnswerTagServiceInterface;
-use ZnDomain\Entity\Helpers\CollectionHelper;
+use ZnCore\Collection\Helpers\CollectionHelper;
 use ZnDomain\Service\Base\BaseCrudService;
 use ZnDomain\Entity\Helpers\EntityHelper;
 
