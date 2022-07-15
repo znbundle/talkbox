@@ -11,9 +11,9 @@ use ZnCore\Arr\Helpers\ArrayHelper;
 use ZnCore\Text\Helpers\TextHelper;
 use ZnCore\Collection\Interfaces\Enumerable;
 use ZnDomain\EntityManager\Interfaces\EntityManagerInterface;
-use ZnCore\Query\Entities\Query;
-use ZnCore\Query\Entities\Where;
-use ZnCore\Query\Enums\OperatorEnum;
+use ZnDomain\Query\Entities\Query;
+use ZnDomain\Query\Entities\Where;
+use ZnDomain\Query\Enums\OperatorEnum;
 use ZnDomain\Service\Base\BaseCrudService;
 use ZnLib\Telegram\Domain\Libs\SoundexRuEn;
 

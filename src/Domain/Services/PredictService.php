@@ -7,8 +7,8 @@ use ZnBundle\TalkBox\Domain\Helpers\WordHelper;
 use ZnCore\Container\Traits\ContainerAwareTrait;
 use ZnCore\Text\Helpers\TextHelper;
 use ZnCore\Collection\Interfaces\Enumerable;
-use ZnCore\Entity\Exceptions\NotFoundException;
-use ZnCore\Entity\Helpers\CollectionHelper;
+use ZnDomain\Entity\Exceptions\NotFoundException;
+use ZnDomain\Entity\Helpers\CollectionHelper;
 use ZnLib\Telegram\Domain\Helpers\MatchHelper;
 
 class PredictService
